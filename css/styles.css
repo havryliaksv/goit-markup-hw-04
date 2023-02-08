@@ -22,6 +22,7 @@
   --btn-accent-color: #ffffff;
   --btn-projects-border-color: #e7e9fc;
   --customer-icon-color: #8e8f99;
+  --projects-card-background-color: #ffffff;
   --line-grad: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 h1,
@@ -281,6 +282,7 @@ body {
 }
 .team-item {
   width: calc((100% - 3 * 24px) / 4);
+  background: var(--team-item-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
@@ -295,11 +297,6 @@ body {
   text-align: center;
   color: var(--title-color);
   margin-bottom: 72px;
-}
-.team-item {
-  background: var(--team-item-color);
-  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .team-subtitle {
   font-weight: 500;
@@ -434,12 +431,23 @@ body {
 .projects-btn:focus {
   background: var(--accent-color);
   color: var(--btn-accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .filter-item:not(:last-child) {
   margin-right: 24px;
 }
 .projects-item {
+  background-color: var(--projects-card-background-color);
+}
+.projects-link {
+  display: inline-block;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
+}
+.projects-link:hover,
+.projects-link:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 .projects-item-signature {
   padding-top: 23px;

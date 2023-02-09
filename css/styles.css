@@ -14,6 +14,7 @@
   --team-background-color: #f4f4fd;
   --team-item-color: #ffffff;
   --footer-background-color: #2e2f42;
+  --footer-soc-media-accent-color: #31d0aa;
   --footer-logo-color: #4d5ae5;
   --footer-logo-end-color: #f4f4fd;
   --footer-text-color: #e7e9fc;
@@ -23,6 +24,7 @@
   --btn-projects-border-color: #e7e9fc;
   --customer-icon-color: #8e8f99;
   --projects-card-background-color: #ffffff;
+  --soc-media-link-color: rgba(255, 255, 255, 0.1);
   --line-grad: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7));
 }
 h1,
@@ -374,21 +376,24 @@ body {
   align-items: center;
   border: 1px solid var(--customer-icon-color);
   border-radius: 4px;
+  color: var(--customer-icon-color);
 }
 .customer-link-icon {
   width: 104px;
   height: 56px;
-  fill: var(--customer-icon-color);
+  fill: currentColor;
 }
 .customer-link:hover,
 .customer-link:focus {
   border-color: var(--accent-color);
+  color: var(--accent-color);
 }
+/*
 .customer-link:hover .customer-link-icon,
 .customer-link:focus .customer-link-icon {
   fill: var(--accent-color);
 }
-
+*/
 /*--------------------PROJECTS-------------------------*/
 .projects {
   padding-top: 91px;
@@ -482,4 +487,41 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--footer-text-color);
+}
+.footer-text-right {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--btn-accent-color);
+
+  margin-bottom: 16px;
+}
+.footer-content {
+  display: flex;
+  gap: 120px;
+}
+.soc-media-list {
+  display: flex;
+  gap: 16px;
+}
+.soc-media-item {
+  width: 40px;
+  height: 40px;
+}
+.soc-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--soc-media-link-color);
+}
+.footer-soc-icon {
+  fill: var(--btn-background-color);
+}
+.soc-media-link:hover,
+.soc-media-link:focus {
+  background-color: var(--footer-soc-media-accent-color);
 }
